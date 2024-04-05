@@ -42,24 +42,25 @@ class _MyAppState extends State<MyApp> {
                 begin: Alignment.topLeft, 
                 end: Alignment.bottomRight, 
                 colors: [Colors.green, Colors.deepPurple, Colors.blue, Colors.red, Colors.orange], 
-      ),
-    ),
-  ),
-),
+              ),
+              ),
+            ),
+          ),
        
-        body: ListView(
-          scrollDirection: Axis.vertical,
-          padding: const EdgeInsets.all(24),
-          children: [
+       
+          body: ListView(
+            scrollDirection: Axis.vertical,
+            padding: const EdgeInsets.all(24),
+            children: [
             
             //Carrossel 1
-            SizedBox(
-              width: double.infinity,
-              height: 200,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  Container(
+              SizedBox(
+                width: double.infinity,
+                height: 200,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Container(
                     height: 150,
                     width: 350,
                     decoration: BoxDecoration(
@@ -103,7 +104,7 @@ class _MyAppState extends State<MyApp> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                   Text('Seus pontos:', style: TextStyle(fontSize: 10)),
-                  Text('855',style: TextStyle(fontSize: 10))
+                  Text('855',style: TextStyle(fontSize: 10)),
                 ],),
               ),
             ),
@@ -194,7 +195,7 @@ class _MyAppState extends State<MyApp> {
                           color: Colors.black54,
                           borderRadius: BorderRadius.circular(8)),
                     ),
-                    const SizedBox(height: 5.0),
+                    const SizedBox(height: 16.0),
                     Container(
                       height: 150,
                       width: 150,

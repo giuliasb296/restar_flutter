@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,16 +19,14 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.red,
+       appBar: AppBar(
           leading: IconButton(
             icon: const Icon(Icons.menu),
             color: Colors.white,
             onPressed: () {},
           ),
           title: const Text(
-            're.star',
-            style: TextStyle(color: Colors.white),
+            're.star', style: TextStyle(color: Colors.white),
           ),
           centerTitle: true,
           actions: [
@@ -37,7 +36,16 @@ class _MyAppState extends State<MyApp> {
               onPressed: () {},
             ),
           ],
-        ),
+          flexibleSpace: Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft, 
+                end: Alignment.bottomRight, 
+                colors: [Colors.green, Colors.deepPurple, Colors.blue, Colors.red, Colors.orange], 
+      ),
+    ),
+  ),
+),
        
         body: ListView(
           scrollDirection: Axis.vertical,
@@ -105,58 +113,73 @@ class _MyAppState extends State<MyApp> {
               height: 30,
             ),
             
-            //Categorias
-            const Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Categorias',
-                  style: TextStyle(color: Colors.black54),
-                ),
-                SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    SizedBox(
-                      height: 100,
-                      width: 100,
-                      child: Column(children: [
-                        CircleAvatar(
-                          backgroundColor: Colors.black54,
-                          radius: 40,
-                        ),
-                        Text('Categoria', style: TextStyle(fontSize: 10),)
-                      ]),
+           //Categorias
+            SizedBox(
+              width: double.infinity,
+              height: 100,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  const SizedBox(width: 8.0),
+                   Column(
+                    children: [
+                      CircleAvatar(
+                    radius: 25,
+                    backgroundColor: Colors.black87,
                     ),
-                    SizedBox(
-                      height: 100,
-                      width: 100,
-                      child: Column(children: [
-                        CircleAvatar(
-                          backgroundColor: Colors.black54,
-                          radius: 40,
-                        ),
-                        Text('Categoria', style: TextStyle(fontSize: 10),)
-                      ]),
+                    Text('Moda', style: TextStyle(fontSize: 12),)
+                  ],),
+                  const SizedBox(width: 8.0),
+                   const Column(
+                    children: [
+                      CircleAvatar(
+                    radius: 25,
+                    backgroundColor: Colors.black87,
                     ),
-                    SizedBox(
-                      height: 100,
-                      width: 100,
-                      child: Column(children: [
-                        CircleAvatar(
-                          backgroundColor: Colors.black54,
-                          radius: 40,
-                        ),
-                        Text('Categoria', style: TextStyle(fontSize: 10),)
-                      ]),
+                    Text('Casa', style: TextStyle(fontSize: 12),)
+                  ],),
+                  const SizedBox(width: 8.0),
+                  const Column(
+                    children: [
+                      CircleAvatar(
+                    radius: 25,
+                    backgroundColor: Colors.black87,
                     ),
-                  ],
-                ),
-              ],
+                    Text('Eletrônicos', style: TextStyle(fontSize: 12),)
+                  ],),
+                  const SizedBox(width: 8.0),
+                   const Column(
+                    children: [
+                      CircleAvatar(
+                    radius: 25,
+                    backgroundColor: Colors.black87,
+                    ),
+                    Text('Beleza', style: TextStyle(fontSize: 12),)
+                  ],),
+                   const SizedBox(width: 8.0),
+                   Column(
+                    children: [
+                      CircleAvatar(
+                    radius: 25,
+                    backgroundColor: Colors.black87,
+                    ),
+                    Text('Acessórios', style: TextStyle(fontSize: 12),)
+                  ],),
+                   const SizedBox(width: 8.0),
+                   Column(
+                    children: [
+                      CircleAvatar(
+                    radius: 25,
+                    backgroundColor: Colors.black87,
+                    ),
+                    Text('Vintage', style: TextStyle(fontSize: 12),)
+                  ],),
+                   const SizedBox(width: 8.0),
+                ],
+              ),
             ),
 
-            //Separação
-            const SizedBox(height: 20),
+           
             
             //Colunas
             Column(
@@ -171,7 +194,7 @@ class _MyAppState extends State<MyApp> {
                           color: Colors.black54,
                           borderRadius: BorderRadius.circular(8)),
                     ),
-                    const SizedBox(height: 16.0),
+                    const SizedBox(height: 5.0),
                     Container(
                       height: 150,
                       width: 150,
